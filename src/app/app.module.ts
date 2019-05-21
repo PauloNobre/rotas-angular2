@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { AppRoutingModule } from './app.routing.module';
 import { CursosModule } from './cursos/cursos.module';
+import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CursosModule } from './cursos/cursos.module';
     BrowserModule,
     MaterializeModule,
     AppRoutingModule,
-    CursosModule
+    CursosModule,
+    AlunosModule
     // routing
   ],
   bootstrap: [AppComponent]
