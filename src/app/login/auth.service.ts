@@ -7,7 +7,7 @@ import { Usuario } from './usuario';
 export class AuthService {
 
   private usuarioAutenticado: boolean = false;
-
+  private usuario: Usuario = new Usuario();
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
   constructor(private _router: Router) { }
@@ -17,9 +17,15 @@ export class AuthService {
       this.usuarioAutenticado = true;
       this.mostrarMenuEmitter.emit(true);
       this._router.navigate(['/']);
+      this.usuario = usuario;
     } else {
       this.usuarioAutenticado = false;
     }
+  }
+
+  isAuthenticated() {
+    console.log(this.usuario);
+    return this.usuarioAutenticado;
   }
 
 }
