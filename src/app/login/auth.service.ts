@@ -24,7 +24,6 @@ export class AuthService {
   }
 
   isAuthenticated() {
-    console.log(this.usuario);
     return this.usuarioAutenticado;
   }
 
